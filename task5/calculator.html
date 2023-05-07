@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Calculator</title>
+<style>
+    .counter {
+    position: relative;
+    font-size: 3rem;
+  }
+  .counter::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: red;
+  }
+  .counter::after {
+    content: counter(value);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    color: gray;
+  }
+  .counter:hover::before {
+    background-color: blue;
+  }
+  .counter:active::before {
+    background-color: green;
+  }
+</style>
+</head>
+<body>
+    <div class="counter">
+        <ol>
+            <li>Первый пункт</li>
+            <li>Второй пункт</li>
+            <li>Третий пункт</li>
+        </ol>
+    </div>
+</body>
+</html>
